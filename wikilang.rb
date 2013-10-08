@@ -24,6 +24,8 @@ class WikiLang
       false
     elsif text.eql? "top"
       false
+    elsif text.eql? ","
+      false
     else
       true
     end

@@ -39,6 +39,12 @@ describe WikiLang do
       subject.add_language "top"
       subject.languages.length.must_equal @lang_length
     end
+
+    it "doesn't add a language if it is the word is a comma" do 
+      @lang_length = subject.languages.length
+      subject.add_language ","
+      subject.languages.length.must_equal @lang_length
+    end
   end
 
   describe "#languages" do
